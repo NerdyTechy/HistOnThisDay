@@ -29,7 +29,6 @@ async function run() {
     }
     
     post((lastTweetId) => {
-        console.log(lastTweetId);
         var message = `📖 Read More: ${events.events[eventNo].wikipedia[0].wikipedia}`;
         client.post('statuses/update', { status: message, in_reply_to_status_id: lastTweetId }, (err, tweet, res) => {
             if (err) return console.error(err);
