@@ -6,7 +6,9 @@
     "scripts": {
         "test": "nodemon index.js",
         "start": "node index.js",
-        "format": "npx prettier --write ."
+        "format": "npx prettier --write .",
+        "lint": "eslint . --ext .js",
+        "lint:fix": "eslint . --ext .js --fix"
     },
     "repository": {
         "type": "git",
@@ -25,6 +27,7 @@
         "twitter": "^1.7.1"
     },
     "devDependencies": {
+        "eslint": "^8.30.0",
         "nodemon": "^2.0.20",
         "prettier": "^2.8.1"
     }
