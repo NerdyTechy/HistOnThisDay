@@ -13,6 +13,8 @@ const client = new Twitter({
 
 const job = schedule.scheduleJob("0 30 13 * * *", function start(){ run(); });
 
+console.log("The bot is now ready and will post at 13:30 every day.");
+
 async function run() {
     const events = await fetch(`https://byabbe.se/on-this-day/12/30/events.json`).then(data => data.json());
 
