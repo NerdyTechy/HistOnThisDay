@@ -11,7 +11,7 @@ const client = new Twitter({
     access_token_secret: process.env.accessTokenSecret
 });
 
-const job = schedule.scheduleJob("0 0 13 * * *", function start(){ run(); });
+const job = schedule.scheduleJob("0 30 13 * * *", function start(){ run(); });
 
 async function run() {
     const events = await fetch(`https://byabbe.se/on-this-day/12/30/events.json`).then(data => data.json());
