@@ -4,7 +4,8 @@
     "description": "Twitter bot that tweets historical events that happened on this day.",
     "main": "index.js",
     "scripts": {
-        "test": "node index.js",
+        "test": "nodemon index.js",
+        "start": "node index.js",
         "format": "npx prettier --write ."
     },
     "repository": {
@@ -24,6 +25,7 @@
         "twitter": "^1.7.1"
     },
     "devDependencies": {
+        "nodemon": "^2.0.20",
         "prettier": "^2.8.1"
     }
 }
