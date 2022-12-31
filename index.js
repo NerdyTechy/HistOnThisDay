@@ -18,7 +18,7 @@ schedule.scheduleJob("0 30 13 * * *", function start() {
 console.log("The bot is now ready and will post at 13:30 every day.");
 
 async function run() {
-    const events = await fetch("https://byabbe.se/on-this-day/12/30/events.json").then((data) => data.json());
+    const events = await fetch(`https://byabbe.se/on-this-day/${new Date().getMonth() + 1}/${new Date().getDate()}/events.json`).then((data) => data.json());
 
     var eventNo = Math.floor(Math.random() * events.events.length);
     while (events.events[eventNo].length >= 245) {
